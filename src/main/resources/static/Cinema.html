@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Cinema</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="Cinema.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Movie Theater Cinema</h1>
+<hr>
+<h2>choose your movie:</h2>
+<label for="movie">
+    FILM:<select id="movie" required>
+    <option value="">SELECT HERE:</option>
+    <option value="GODFATHER">GODFATHER</option>
+    <option value="CAPE FEAR">CAPE FEAR</option>
+    <option value="MANHATTAN">MANHATTAN</option>
+    <option value="VARGTIMEN">VARGTIMEN</option>
+</select>
+</label>
+<label for="amount">
+    AMOUNT: <input type="number" id="amount" min="1" max="9" required>
+</label>
+<h3>your details:</h3>
+<table class="tableField">
+    <tr>
+        <td><label for="firstname">FIRST NAME:</label></td>
+        <td><input type="text" id="firstname" pattern="/^[a-z ,.'-]+$/i" required></td>
+        <td><label for="lastname">LAST NAME:</label></td>
+        <td><input type="text" id="lastname" pattern="/^[a-z ,.'-]+$/i" required></td>
+    </tr>
+    <tr>
+
+        <td><label for="email">EMAIL:</label></td>
+        <td><input type="email" id="email" pattern="/^[\w-.]+@([\w-" required></td>
+        <td><label for="number">TEL:</label></td>
+        <td><input type="tel" id="number" pattern="[0-9]{8}" required></td>
+        <td><button onclick="allCustomers();">CONFIRM</button></td>
+    </tr>
+</table>
+
+<br>
+<hr>
+All customers:
+<div id="result"></div>
+<div id="edit"></div>
+<button onclick="deleteAlLCustomer()">DELETE</button>
+
+</body>
+</html>
